@@ -49,6 +49,7 @@ assets/
 !frontend/src/assets/
 
 # Custom configuration files
+.env.openai
 config/*.yml
 !config/addo.yml
 !config/bodgeit.yml

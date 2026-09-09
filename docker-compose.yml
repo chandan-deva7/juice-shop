@@ -1,0 +1,32 @@
+services:
+  app:
+    image: bkimminich/juice-shop:latest
+    ports:
+      - "3000:3000"
+
+  chroma:
+    image: chromadb/chroma:latest
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma-data:/chroma/chroma
+
+  assistant:
+    build:
+      context: .
+      dockerfile: ai_assistant/Dockerfile
+    depends_on:
+      - app
+      - chroma
+    env_file:
+      - .env.openai
+    environment:
+      AUTO_INGEST: "true"
+      CHROMA_HOST: chroma
+      CHROMA_PORT: 8000
+      PRODUCTS_URL: http://app:3000/api/Products
+    ports:
+      - "8000:8000"
+
+volumes:
+  chroma-data:

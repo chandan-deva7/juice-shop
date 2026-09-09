@@ -5,5 +5,6 @@
 
 export const environment = {
   production: true,
-  hostServer: '.'
+  hostServer: '.',
+  assistantServer: 'http://localhost:8000'
 }

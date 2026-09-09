@@ -1,4 +1,5 @@
 .git/
+.env.openai
 monitoring/
 node_modules/
 screenshots/

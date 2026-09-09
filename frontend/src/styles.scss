@@ -806,3 +806,336 @@ div.mdc-card {
 .mat-mdc-tooltip-surface {
   max-height: none !important;
 }
+/* ============================================================
+   Juice Shop — Modern E-commerce Global UI
+   ============================================================ */
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: $background;
+  color: $text-primary;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Main application canvas */
+mat-sidenav-container,
+.mat-drawer-container {
+  background: $background !important;
+  color: $text-primary;
+}
+
+/* Smooth global transitions */
+button,
+a,
+mat-card,
+.mat-mdc-card,
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-unelevated-button,
+.mat-mdc-icon-button,
+.mat-mdc-outlined-button,
+input,
+textarea,
+select {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+/* Links */
+body a {
+  color: $brand-orange;
+}
+
+body a:hover {
+  color: $brand-orange-dark;
+}
+
+/* ============================================================
+   Material buttons
+   ============================================================ */
+
+.mat-mdc-raised-button,
+.mat-mdc-unelevated-button {
+  border-radius: $radius-md !important;
+  min-height: 44px;
+  padding-inline: $space-l !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  box-shadow: none !important;
+}
+
+.mat-mdc-raised-button.mat-primary,
+.mat-mdc-unelevated-button.mat-primary {
+  background: $brand-orange !important;
+  color: #fff !important;
+}
+
+.mat-mdc-raised-button.mat-primary:hover,
+.mat-mdc-unelevated-button.mat-primary:hover {
+  background: $brand-orange-dark !important;
+  box-shadow: $shadow-md !important;
+  transform: translateY(-1px);
+}
+
+.mat-mdc-outlined-button {
+  border-radius: $radius-md !important;
+  min-height: 44px;
+  border-color: $border !important;
+  color: $text-primary !important;
+}
+
+.mat-mdc-outlined-button:hover {
+  border-color: $brand-orange !important;
+  color: $brand-orange !important;
+  background: rgba(255, 107, 0, 0.04) !important;
+}
+
+.mat-mdc-button {
+  border-radius: $radius-md !important;
+  font-weight: 600 !important;
+}
+
+/* Icon buttons */
+.mat-mdc-icon-button {
+  border-radius: 50% !important;
+}
+
+.mat-mdc-icon-button:hover {
+  background: rgba(255, 107, 0, 0.08) !important;
+  color: $brand-orange !important;
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+
+.mat-mdc-card {
+  border-radius: $radius-lg !important;
+  border: 1px solid $border !important;
+  background: $surface !important;
+  box-shadow: $shadow-sm !important;
+}
+
+.mat-mdc-card:hover {
+  box-shadow: $shadow-md !important;
+}
+
+/* ============================================================
+   Expansion panels
+   ============================================================ */
+
+.mat-expansion-panel {
+  border-radius: $radius-lg !important;
+  background: $surface !important;
+  border: 1px solid $border !important;
+  box-shadow: $shadow-sm !important;
+}
+
+.mat-expansion-panel:not(.mat-expanded):hover {
+  box-shadow: $shadow-md !important;
+}
+
+/* ============================================================
+   Form fields
+   ============================================================ */
+
+.mat-mdc-form-field {
+  --mdc-filled-text-field-container-color: #{$surface};
+  --mdc-outlined-text-field-container-color: #{$surface};
+  --mdc-outlined-text-field-outline-color: #{$border};
+  --mdc-outlined-text-field-hover-outline-color: #{$text-muted};
+  --mat-form-field-focus-outline-color: #{$brand-orange};
+}
+
+.mat-mdc-form-field .mdc-text-field {
+  border-radius: $radius-md;
+}
+
+.mat-mdc-form-field.mat-focused {
+  --mdc-outlined-text-field-focus-outline-color: #{$brand-orange};
+}
+
+.mat-mdc-input-element {
+  color: $text-primary !important;
+}
+
+.mat-mdc-form-field-hint,
+.mat-mdc-form-field-subscript-wrapper {
+  color: $text-secondary;
+}
+
+/* ============================================================
+   Select / menu / autocomplete
+   ============================================================ */
+
+.mat-mdc-menu-panel,
+.mat-mdc-autocomplete-panel,
+.mat-mdc-select-panel {
+  border-radius: $radius-md !important;
+  border: 1px solid $border;
+  box-shadow: $shadow-lg !important;
+  background: $surface !important;
+}
+
+.mat-mdc-menu-item:hover {
+  background: $surface-soft !important;
+}
+
+.mat-mdc-menu-item:hover .mat-icon,
+.mat-mdc-menu-item:hover span {
+  color: $brand-orange;
+}
+
+/* ============================================================
+   Dialogs
+   ============================================================ */
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  border-radius: $radius-xl !important;
+  background: $surface !important;
+  box-shadow: $shadow-lg !important;
+  border: 1px solid $border;
+}
+
+/* ============================================================
+   Chips
+   ============================================================ */
+
+.mat-mdc-standard-chip,
+.mat-mdc-chip,
+.suggestion-chip {
+  border-radius: 999px !important;
+}
+
+/* ============================================================
+   Paginator
+   ============================================================ */
+
+.mat-mdc-paginator {
+  border-radius: $radius-md !important;
+  background: $surface !important;
+  color: $text-primary !important;
+  border: 1px solid $border;
+  box-shadow: $shadow-sm;
+}
+
+/* ============================================================
+   Tables
+   ============================================================ */
+
+.mat-mdc-table {
+  background: $surface !important;
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+
+.mat-mdc-header-row {
+  background: $surface-soft !important;
+}
+
+.mat-mdc-header-cell {
+  color: $text-primary !important;
+  font-weight: 700 !important;
+}
+
+.mat-mdc-cell {
+  color: $text-secondary !important;
+}
+
+.mat-mdc-row:hover {
+  background: rgba(255, 107, 0, 0.035) !important;
+}
+
+/* ============================================================
+   Checkboxes / radios
+   ============================================================ */
+
+.mat-mdc-checkbox,
+.mat-mdc-radio-button {
+  --mdc-checkbox-selected-checkmark-color: #fff;
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $background;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+  border: 2px solid $background;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ============================================================
+   Selection
+   ============================================================ */
+
+::selection {
+  background: rgba(255, 107, 0, 0.18);
+  color: $text-primary;
+}
+
+/* ============================================================
+   Focus accessibility
+   ============================================================ */
+
+:focus-visible {
+  outline: 3px solid rgba(255, 107, 0, 0.28);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Utility containers
+   ============================================================ */
+
+.page-container {
+  width: min(100% - 2rem, $content-max-width);
+  margin-inline: auto;
+}
+
+/* ============================================================
+   Mobile global adjustments
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: $radius-lg !important;
+  }
+
+  .mat-mdc-raised-button,
+  .mat-mdc-unelevated-button,
+  .mat-mdc-outlined-button {
+    min-height: 42px;
+  }
+}

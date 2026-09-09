@@ -43,7 +43,7 @@ describe('ChatService', () => {
       }
     })()
 
-    const req = httpMock.expectOne('http://localhost:3000/rest/chat')
+    const req = httpMock.expectOne('http://localhost:8000/rest/chat')
     expect(req.request.method).toBe('POST')
 
     req.event({
@@ -80,7 +80,7 @@ describe('ChatService', () => {
       }
     })()
 
-    const req = httpMock.expectOne('http://localhost:3000/rest/chat')
+    const req = httpMock.expectOne('http://localhost:8000/rest/chat')
 
     req.event({
       type: HttpEventType.DownloadProgress,
@@ -107,7 +107,7 @@ describe('ChatService', () => {
       }
     })()
 
-    const req = httpMock.expectOne('http://localhost:3000/rest/chat')
+    const req = httpMock.expectOne('http://localhost:8000/rest/chat')
     req.event({
       type: HttpEventType.DownloadProgress,
       loaded: 50,
@@ -132,7 +132,7 @@ describe('ChatService', () => {
       }
     })()
 
-    const req = httpMock.expectOne('http://localhost:3000/rest/chat')
+    const req = httpMock.expectOne('http://localhost:8000/rest/chat')
     req.error(new ErrorEvent('Network error'))
 
     await processPromise

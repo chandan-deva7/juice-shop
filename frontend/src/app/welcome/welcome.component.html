@@ -1,6 +1,310 @@
 <!--
   ~ Copyright (c) 2014-2026 Bjoern Kimminich & the OWASP Juice Shop contributors.
   ~ SPDX-License-Identifier: MIT
-  -->
+-->
 
-<div></div>
+<section class="home-page">
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <span class="eyebrow">WELCOME TO JUICE SHOP</span>
+
+      <h1>
+        Fresh.
+        <span>Simple.</span>
+        Juicy.
+      </h1>
+
+      <p>
+        Everything you need, delivered with a little juice.
+        Discover drinks, snacks, merch and more.
+      </p>
+
+      <div class="hero-actions">
+        <a
+          mat-raised-button
+          color="primary"
+          routerLink="/search">
+          Shop Now
+        </a>
+
+        <a
+          mat-stroked-button
+          routerLink="/search">
+          Explore Products
+        </a>
+      </div>
+
+      <div class="hero-features">
+        <div class="hero-feature">
+          <mat-icon>local_shipping</mat-icon>
+          <span>Fast delivery</span>
+        </div>
+
+        <div class="hero-feature">
+          <mat-icon>verified</mat-icon>
+          <span>Quality products</span>
+        </div>
+
+        <div class="hero-feature">
+          <mat-icon>favorite</mat-icon>
+          <span>Loved by shoppers</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-circle hero-circle-large"></div>
+      <div class="hero-circle hero-circle-small"></div>
+
+      <div class="juice-bottle">
+        <div class="bottle-cap"></div>
+        <div class="bottle-body">
+          <div class="bottle-label">
+            <strong>JUICE</strong>
+            <span>SHOP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-fruit fruit-one">🍊</div>
+      <div class="floating-fruit fruit-two">🍋</div>
+      <div class="floating-fruit fruit-three">🍓</div>
+    </div>
+  </section>
+
+
+  <!-- Categories -->
+  <section class="category-section">
+    <div class="section-heading">
+      <div>
+        <span class="section-eyebrow">EXPLORE</span>
+        <h2>Shop by category</h2>
+      </div>
+
+      <a routerLink="/search" class="view-all">
+        View all
+        <mat-icon>arrow_forward</mat-icon>
+      </a>
+    </div>
+
+    <div class="category-grid">
+
+      <a class="category-card drinks" routerLink="/search">
+        <div class="category-icon">🍹</div>
+        <div>
+          <h3>Drinks</h3>
+          <p>Fresh juices & smoothies</p>
+        </div>
+        <mat-icon>arrow_forward</mat-icon>
+      </a>
+
+      <a class="category-card snacks" routerLink="/search">
+        <div class="category-icon">🍪</div>
+        <div>
+          <h3>Snacks</h3>
+          <p>Tasty bites for every mood</p>
+        </div>
+        <mat-icon>arrow_forward</mat-icon>
+      </a>
+
+      <a class="category-card merch" routerLink="/search">
+        <div class="category-icon">👕</div>
+        <div>
+          <h3>Merch</h3>
+          <p>Show your Juice Shop pride</p>
+        </div>
+        <mat-icon>arrow_forward</mat-icon>
+      </a>
+
+      <a class="category-card more" routerLink="/search">
+        <div class="category-icon">🎁</div>
+        <div>
+          <h3>More</h3>
+          <p>Find something unexpected</p>
+        </div>
+        <mat-icon>arrow_forward</mat-icon>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- Featured products -->
+  <section class="featured-section">
+    <div class="section-heading">
+      <div>
+        <span class="section-eyebrow">OUR PICKS</span>
+        <h2>Featured products</h2>
+      </div>
+
+      <a routerLink="/search" class="view-all">
+        Shop all
+        <mat-icon>arrow_forward</mat-icon>
+      </a>
+    </div>
+
+    <div class="featured-grid">
+
+      <a class="featured-card" routerLink="/search">
+        <div class="product-image-placeholder orange">
+          🍊
+        </div>
+
+        <div class="product-info">
+          <span class="product-category">JUICE</span>
+          <h3>Orange Juice</h3>
+          <p>Bright, refreshing and naturally delicious.</p>
+
+          <div class="product-bottom">
+            <strong>$1.99</strong>
+            <span class="product-arrow">
+              <mat-icon>arrow_forward</mat-icon>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a class="featured-card" routerLink="/search">
+        <div class="product-image-placeholder yellow">
+          🍌
+        </div>
+
+        <div class="product-info">
+          <span class="product-category">JUICE</span>
+          <h3>Banana Juice</h3>
+          <p>A smooth and fruity favorite.</p>
+
+          <div class="product-bottom">
+            <strong>$1.99</strong>
+            <span class="product-arrow">
+              <mat-icon>arrow_forward</mat-icon>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a class="featured-card" routerLink="/search">
+        <div class="product-image-placeholder green">
+          🥝
+        </div>
+
+        <div class="product-info">
+          <span class="product-category">SMOOTHIE</span>
+          <h3>Green Smoothie</h3>
+          <p>Fresh ingredients blended together.</p>
+
+          <div class="product-bottom">
+            <strong>$3.49</strong>
+            <span class="product-arrow">
+              <mat-icon>arrow_forward</mat-icon>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a class="featured-card" routerLink="/search">
+        <div class="product-image-placeholder berry">
+          🍓
+        </div>
+
+        <div class="product-info">
+          <span class="product-category">JUICE</span>
+          <h3>Berry Juice</h3>
+          <p>Sweet, vibrant and packed with flavor.</p>
+
+          <div class="product-bottom">
+            <strong>$2.49</strong>
+            <span class="product-arrow">
+              <mat-icon>arrow_forward</mat-icon>
+            </span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- Why Juice Shop -->
+  <section class="why-section">
+
+    <div class="why-content">
+      <span class="section-eyebrow">WHY JUICE SHOP?</span>
+
+      <h2>
+        A little more joy
+        <span>in every order.</span>
+      </h2>
+
+      <p>
+        From refreshing drinks to exclusive Juice Shop merch,
+        we've got something for every kind of shopper.
+      </p>
+
+      <a
+        mat-raised-button
+        color="primary"
+        routerLink="/search">
+        Start Shopping
+      </a>
+    </div>
+
+    <div class="benefits-grid">
+
+      <div class="benefit">
+        <div class="benefit-icon">🍊</div>
+        <h3>Fresh</h3>
+        <p>Discover delicious products made for everyday enjoyment.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">🔒</div>
+        <h3>Secure</h3>
+        <p>Shop confidently with a safe and trusted experience.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">⚡</div>
+        <h3>Fast</h3>
+        <p>Find what you need quickly with an easy shopping experience.</p>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">💜</div>
+        <h3>Fun</h3>
+        <p>Because shopping should never feel boring.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- JuiceBot CTA -->
+  <section class="juicebot-banner">
+
+    <div class="juicebot-avatar">
+      🍊
+    </div>
+
+    <div class="juicebot-content">
+      <span>NEED A HAND?</span>
+      <h2>Ask JuiceBot.</h2>
+      <p>
+        Need help finding a product or navigating the shop?
+        JuiceBot is here to help.
+      </p>
+    </div>
+
+    <a
+      routerLink="/chatbot"
+      mat-raised-button>
+      Talk to JuiceBot
+      <mat-icon>arrow_forward</mat-icon>
+    </a>
+
+  </section>
+
+</section>

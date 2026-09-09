@@ -5,7 +5,7 @@
 
 import { Component, ChangeDetectionStrategy } from '@angular/core'
 import { dom } from '@fortawesome/fontawesome-svg-core'
-import { RouterOutlet } from '@angular/router'
+import { RouterLink, RouterOutlet } from '@angular/router'
 import { WelcomeComponent } from './welcome/welcome.component'
 import { ChallengeSolvedNotificationComponent } from './challenge-solved-notification/challenge-solved-notification.component'
 import { CtfSystemWideNotificationComponent } from './ctf-system-wide-notification/ctf-system-wide-notification.component'
@@ -21,7 +21,18 @@ dom.watch()
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  imports: [MatSidenavContainer, MatSidenav, SidenavComponent, NavbarComponent, ServerStartedNotificationComponent, ChallengeSolvedNotificationComponent, CtfSystemWideNotificationComponent, WelcomeComponent, RouterOutlet]
+  imports: [
+    MatSidenavContainer,
+    MatSidenav,
+    SidenavComponent,
+    NavbarComponent,
+    ServerStartedNotificationComponent,
+    ChallengeSolvedNotificationComponent,
+    CtfSystemWideNotificationComponent,
+    WelcomeComponent,
+    RouterOutlet,
+    RouterLink
+  ]
 })
 export class AppComponent {
 }

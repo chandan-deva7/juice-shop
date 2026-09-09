@@ -8,15 +8,22 @@ import { ConfigurationService } from '../Services/configuration.service'
 import { MatDialog } from '@angular/material/dialog'
 import { WelcomeBannerComponent } from '../welcome-banner/welcome-banner.component'
 import { CookieService } from 'ngy-cookie'
+import { MatButtonModule } from '@angular/material/button'
+import { MatIconModule } from '@angular/material/icon'
+import { RouterLink } from '@angular/router'
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Eager,
   selector: 'app-welcome',
   templateUrl: 'welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
-  standalone: true
+  standalone: true,
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    RouterLink
+  ]
 })
-
 export class WelcomeComponent implements OnInit {
   private readonly dialog = inject(MatDialog)
   private readonly configurationService = inject(ConfigurationService)
@@ -26,12 +33,14 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit (): void {
     const welcomeBannerStatus = this.cookieService.get(this.welcomeBannerStatusCookieKey)
+
     if (welcomeBannerStatus !== 'dismiss') {
       this.configurationService.getApplicationConfiguration().subscribe({
         next: (config: any) => {
           if (config?.application?.welcomeBanner && !config.application.welcomeBanner.showOnFirstStart) {
             return
           }
+
           this.dialog.open(WelcomeBannerComponent, {
             minWidth: '320px',
             width: '35%',

@@ -26,7 +26,7 @@ export interface ToolCall {
 export class ChatService {
   private readonly http = inject(HttpClient)
   private readonly hostServer = environment.hostServer
-  private readonly host = this.hostServer + '/rest/chat'
+  private readonly host = environment.assistantServer + '/rest/chat'
 
   async * streamMessages (messages: { role: string, content: string }[]): AsyncGenerator<ChatChunk> {
     const chunks: ChatChunk[] = []

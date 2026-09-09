@@ -7,10 +7,39 @@
   <mat-sidenav #sidenav mode="over">
     <sidenav (sidenavToggle)="sidenav.toggle()"></sidenav>
   </mat-sidenav>
+
   <app-navbar (sidenavToggle)="sidenav.toggle()"></app-navbar>
+
   <app-server-started-notification></app-server-started-notification>
   <app-ctf-system-wide-notification></app-ctf-system-wide-notification>
   <app-challenge-solved-notification></app-challenge-solved-notification>
+
   <app-welcome></app-welcome>
+
   <router-outlet></router-outlet>
+
+  <!-- Floating JuiceBot launcher -->
+  <a
+    class="juicebot-launcher"
+    routerLink="/chatbot"
+    aria-label="Talk to JuiceBot"
+  >
+    <span class="juicebot-message">
+      Hi, I'm JuiceBot. How can I help you today?
+    </span>
+
+    <span class="juicebot-button">
+      <span class="juicebot-avatar">
+        <img
+          src="assets/public/images/JuicyBot.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </span>
+
+      <span class="juicebot-label">
+        Talk to JuiceBot
+      </span>
+    </span>
+  </a>
 </mat-sidenav-container>

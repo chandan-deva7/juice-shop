@@ -1,0 +1,29 @@
+services:
+  chroma:
+    image: chromadb/chroma:latest
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma-data:/chroma/chroma
+
+  assistant:
+    build:
+      context: .
+      dockerfile: ai_assistant/Dockerfile
+    depends_on:
+      - chroma
+    # env_file:
+    #   - .env.openai
+    environment:
+      CHROMA_HOST: chroma
+      CHROMA_PORT: 8000
+      PRODUCTS_URL: http://host.docker.internal:3000/api/Products
+      OLLAMA_URL: http://host.docker.internal:11434
+      OLLAMA_MODEL: llama3.2
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8000:8000"
+
+volumes:
+  chroma-data:

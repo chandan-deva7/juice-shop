@@ -5,81 +5,202 @@
 
 @use '../../styles/variables' as *;
 
+:host {
+  display: block;
+  min-height: calc(100vh - $navbar-height);
+  background: $background;
+}
+
+/* ---------------------------------------------------------
+   MAIN PRODUCTS CONTAINER
+--------------------------------------------------------- */
 
 .container {
-  min-width: calc(360px - 2 * $space-m);
-  width: 80%;
+  width: min(100% - 2rem, $content-max-width);
+  min-width: 0;
   margin: 0 auto;
+  padding: $space-xl 0 $space-3xl;
+  box-sizing: border-box;
 }
+
+/* ---------------------------------------------------------
+   PAGE HEADING
+--------------------------------------------------------- */
 
 .heading {
-  background: var(--mat-sys-surface-container);
-  justify-content: center;
-  padding: $space-s $space-ml;
-  margin-bottom: $space-m;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-m;
 
+  background: transparent;
+  color: $text-primary;
+
+  padding: 0 0 $space-l;
+  margin: 0;
+
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  box-shadow: none;
+  border: 0;
 }
+
+#search-result-heading {
+  margin-left: auto;
+}
+
+/* Search value inside the heading */
+#searchValue {
+  color: $brand-orange;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   PRODUCT GRID
+--------------------------------------------------------- */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: $space-l;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+/* ---------------------------------------------------------
+   PRODUCT CARD
+--------------------------------------------------------- */
 
 .product {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
+
+/* ---------------------------------------------------------
+   EMPTY SEARCH STATE
+--------------------------------------------------------- */
 
 .emptyState {
   display: block;
-  margin: $space-ml auto;
-  width: 50%;
-}
+  margin: $space-xl auto;
+  width: min(100%, 520px);
 
-.noResult {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
 
-.noResultText {
-  display: block;
-  margin-top: $space-s;
-  text-align: center;
+  box-shadow: $shadow-sm;
 }
 
 .mdc-card {
   border: 0;
+  background: transparent;
+  padding: $space-xl;
 }
+
+.noResult {
+  display: block;
+  margin: 0 auto;
+  width: min(100%, 280px);
+  max-height: 240px;
+  object-fit: contain;
+}
+
+.noResultText {
+  display: block;
+  margin-top: $space-m;
+  text-align: center;
+  color: $text-secondary;
+}
+
+mat-card-title {
+  color: $text-primary;
+  font-weight: 700;
+  text-align: center;
+}
+
+mat-card-content {
+  text-align: center;
+}
+
+/* ---------------------------------------------------------
+   PAGINATION
+--------------------------------------------------------- */
 
 .paginator {
-  margin-top: $space-m;
+  margin-top: $space-xl;
+
+  border: 1px solid $border;
+  border-radius: $radius-md;
+
+  background: $surface;
+
+  box-shadow: $shadow-sm;
 }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: $space-l;
-  justify-content: center;
-}
+/* ---------------------------------------------------------
+   LARGE TABLETS
+--------------------------------------------------------- */
 
-@media (max-width: 959.98px) {
+@media (max-width: 1199px) {
   .products-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
+/* ---------------------------------------------------------
+   TABLETS
+--------------------------------------------------------- */
+
+@media (max-width: 850px) {
+  .container {
+    width: min(100% - 2rem, $content-max-width);
+    padding-top: $space-l;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $space-m;
+  }
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
 @media (max-width: 580px) {
   .container {
-    width: auto;
-    margin: 0 $space-m;
+    width: calc(100% - 2rem);
+    padding-top: $space-m;
+    padding-bottom: $space-xl;
+  }
+
+  .heading {
+    font-size: 1.3rem;
+    padding-bottom: $space-m;
   }
 
   .products-grid {
     grid-template-columns: 1fr;
-  }
-
-  .product {
-    flex-direction: column;
+    gap: $space-m;
   }
 
   .emptyState {
     width: 100%;
+  }
+
+  .mdc-card {
+    padding: $space-l;
+  }
+
+  .paginator {
+    margin-top: $space-l;
   }
 }

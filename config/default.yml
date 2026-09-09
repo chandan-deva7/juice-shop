@@ -104,7 +104,7 @@ products:
     deluxePrice: 0.99
     limitPerUser: 5
     description: 'The all-time classic.'
-    image: apple_juice.jpg
+    image: modern_apple_juice.jpg
     reviews:
       - { text: 'One of my favorites!', author: admin }
       - { text: "Great! We'll have an apple party. Everyone brings an apple and - STUFFS IT DOWN EACH OTHER'S THROAT!", author: basil }
@@ -113,33 +113,33 @@ products:
     description: 'Made from oranges hand-picked by Uncle Dittmeyer.'
     price: 2.99
     deluxePrice: 2.49
-    image: orange_juice.jpg
+    image: modern_orange_juice.jpg
     reviews:
       - { text: 'y0ur f1r3wall needs m0r3 musc13', author: uvogin }
   -
     name: 'Eggfruit Juice (500ml)'
     description: 'Now with even more exotic flavour.'
     price: 8.99
-    image: eggfruit_juice.jpg
+    image: modern_fruit_bowl.jpg
     reviews:
       - { text: 'I bought it, would buy again. 5/7', author: admin }
   -
     name: 'Raspberry Juice (1000ml)'
     description: 'Made from blended Raspberry Pi, water and sugar.'
     price: 4.99
-    image: raspberry_juice.jpg
+    image: modern_berry_juice.jpg
   -
     name: 'Lemon Juice (500ml)'
     description: 'Sour but full of vitamins.'
     price: 2.99
     deluxePrice: 1.99
     limitPerUser: 5
-    image: lemon_juice.jpg
+    image: modern_lemon_juice.jpg
   -
     name: 'Banana Juice (1000ml)'
     description: 'Monkeys love it the most.'
     price: 1.99
-    image: banana_juice.jpg
+    image: modern_banana_juice.jpg
     reviews:
       - { text: 'Fry liked it too.', author: bender }
   -
@@ -235,7 +235,7 @@ products:
     name: 'Green Smoothie'
     description: 'Looks poisonous but is actually very good for your health! Made from green cabbage, spinach, kiwi and grass.'
     price: 1.99
-    image: green_smoothie.jpg
+    image: modern_green_juice.jpg
     reviews:
       - { text: 'Fresh out of a replicator.', author: jim }
   -

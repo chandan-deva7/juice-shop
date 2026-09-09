@@ -3,23 +3,83 @@
  * SPDX-License-Identifier: MIT
  */
 
-// Spacing Tokens
-// Standardized spacing for margins, paddings, and gaps using REM units.
-// Example: margin-bottom: $space-m;
+// --------------------------------------------------
+// Spacing
+// --------------------------------------------------
 
-$space-3xs: 0.125rem; // 2px
-$space-2xs: 0.25rem; // 4px
-$space-xs: 0.5rem; // 8px
-$space-s: 0.625rem; // 10px
+$space-3xs: 0.125rem;
+$space-2xs: 0.25rem;
+$space-xs: 0.5rem;
+$space-s: 0.625rem;
+$space-m: 1rem;
+$space-ml: 1.25rem;
+$space-l: 1.5rem;
+$space-xl: 2rem;
+$space-2xl: 2.5rem;
+$space-3xl: 3rem;
+$space-4xl: 4rem;
 
-$space-m: 1rem; // 16px
+// --------------------------------------------------
+// Layout
+// --------------------------------------------------
 
-$space-ml: 1.25rem; // 20px
-$space-l: 1.5rem; // 24px
-$space-xl: 2rem; // 32px
-$space-2xl: 2.5rem; // 40px
-$space-3xl: 3rem; // 48px
-$space-4xl: 4rem; // 64px
-
-// Component sizes
 $navbar-height: 72px;
+$content-max-width: 1440px;
+
+// --------------------------------------------------
+// Brand
+// --------------------------------------------------
+
+$brand-orange: #ff6b00;
+$brand-orange-dark: #e85f00;
+
+$brand-navy: #172554;
+
+$brand-purple: #7b2ff7;
+
+// --------------------------------------------------
+// Surfaces
+// --------------------------------------------------
+
+$background: #fafaf7;
+$surface: #ffffff;
+$surface-soft: #f5f5f0;
+
+// --------------------------------------------------
+// Text
+// --------------------------------------------------
+
+$text-primary: #172554;
+$text-secondary: #64748b;
+$text-muted: #94a3b8;
+
+// --------------------------------------------------
+// Borders
+// --------------------------------------------------
+
+$border: #e5e7eb;
+
+// --------------------------------------------------
+// Status
+// --------------------------------------------------
+
+$success: #16a34a;
+$warning: #f59e0b;
+$error: #dc2626;
+
+// --------------------------------------------------
+// Border Radius
+// --------------------------------------------------
+
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 20px;
+$radius-xl: 28px;
+
+// --------------------------------------------------
+// Shadows
+// --------------------------------------------------
+
+$shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+$shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+$shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.12);
